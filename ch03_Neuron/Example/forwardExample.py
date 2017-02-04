@@ -1,4 +1,11 @@
+# coding: utf-8
+import sys, os
+sys.path.append(os.pardir)
+
 import numpy as np
+
+from ActivationFunction.sigmoid import sigmoid
+from OutputFunction.identityFunction import identity_function
 
 def init_network():
     network = {}
@@ -10,12 +17,6 @@ def init_network():
     network['b3'] = np.array([0.1, 0.2])
 
     return network
-
-def sigmoid(x):
-    return 1 / (1 + np.exp(-x))
-
-def identity_function(x):
-    return x
 
 def forward(network, x):
     W1, W2, W3 = network['W1'], network['W2'], network['W3']
@@ -30,8 +31,8 @@ def forward(network, x):
 
     return y
 
-network = init_network()
-x = np.array([1.0, 0.5])
-y = forward(network, x)
-
-print(y)
+if __name__ == '__main__':
+    network = init_network()
+    x = np.array([1.0, 0.5])
+    y = forward(network, x)
+    print(y)
