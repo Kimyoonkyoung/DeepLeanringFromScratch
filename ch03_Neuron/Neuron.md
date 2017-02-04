@@ -1,7 +1,7 @@
 # Neuron
 ## ActivationFunction
 입력 신호의 총합을 출력 신호로 변환하는 비선형 함수
->선형함수의 경우에는 hidden layer를 깊게 하더라도, single layer와 같은 기능을 하게 된다
+선형함수의 경우에는 hidden layer를 깊게 하더라도, single layer와 같은 기능을 하게 된다
 * **stepFunction**
     * 0 보다 작으면 0, 0 보다 크면 1
     * 연속적이지 못한것이 하나의 단점
